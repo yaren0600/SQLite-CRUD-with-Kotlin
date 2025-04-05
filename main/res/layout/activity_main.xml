@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/etadsoyad"
+        android:layout_width="379dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:hint="Adnızı ve Soyadınızı Girin"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/etyas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etyas"
+        android:layout_width="379dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Yaşınızı Girin:"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnkaydet"
+        app:layout_constraintEnd_toEndOf="@+id/etadsoyad"
+        app:layout_constraintStart_toStartOf="@+id/etadsoyad"
+        app:layout_constraintTop_toBottomOf="@+id/etadsoyad" />
+
+    <Button
+        android:id="@+id/btnkaydet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Kaydet"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnguncelle"
+        app:layout_constraintEnd_toEndOf="@+id/etyas"
+        app:layout_constraintStart_toStartOf="@+id/etyas"
+        app:layout_constraintTop_toBottomOf="@+id/etyas" />
+
+    <Button
+        android:id="@+id/btnoku"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Oku"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnguncelle"
+        app:layout_constraintEnd_toStartOf="@+id/btnguncelle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnguncelle" />
+
+    <Button
+        android:id="@+id/btnguncelle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Güncelle"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="@+id/btnkaydet"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btnkaydet"
+        app:layout_constraintTop_toBottomOf="@+id/btnkaydet" />
+
+    <Button
+        android:id="@+id/btnsil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="Sil"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnguncelle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnguncelle"
+        app:layout_constraintTop_toTopOf="@+id/btnguncelle" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="379dp"
+        android:layout_height="616dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnguncelle">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvsonuc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
